@@ -1,10 +1,10 @@
 import React, { useState } from 'react';
+import { Platform, StatusBar } from 'react-native';
 
 import {
-    Container,
-    Header, Content,
-    Logo, Title, Input, Button, ButtonText, Link, LinkText
-} from './styles';
+    Container, Header, Logo, Title, Content,
+    Input, Button, Link
+} from '../../components';
 
 export default function SignIn({ navigation }) {
     const [username, setUsername] = useState('');
@@ -19,12 +19,18 @@ export default function SignIn({ navigation }) {
     };
 
     return (
-        <Container>
-            <Header>
-                <Logo source={require('../../assets/logo.png')} resizeMode="contain" />
-                <Title>Sign In to Eletronic Point</Title>
-            </Header>
-            <Content>
+        <Container
+            behavior={Platform.select({
+                ios: 'padding',
+                android: null,
+            })}
+        >
+            <Content width="90%">
+                <StatusBar hidden />
+                <Header>
+                    <Logo source={require('../../assets/logo.png')} resizeMode="contain" />
+                    <Title>Sign In to Eletronic Point</Title>
+                </Header>
                 <Input
                     placeholder="Username"
                     value={username}
@@ -40,12 +46,8 @@ export default function SignIn({ navigation }) {
                     autoCorrect={false}
                     secureTextEntry={true}
                 />
-                <Button onPress={handleSignInPress}>
-                    <ButtonText>Sign In</ButtonText>
-                </Button>
-                <Link onPress={handleCreateAccountPress}>
-                    <LinkText>Not already have an account? Sign Up</LinkText>
-                </Link>
+                <Button label="SIGN IN" onPress={handleSignInPress} />
+                <Link label="Not already have an account? Sign Up" onPress={handleCreateAccountPress} />
             </Content>
         </Container>
     );
