@@ -50,7 +50,7 @@ export const RoutesPrimary = createAppContainer(
         },
             {
                 barStyle: {
-                    backgroundColor: '#24292e',
+                    backgroundColor: '#161a1d',
                 },
             })
     })

@@ -1,13 +1,14 @@
 import React from 'react';
 
-import { Container, Title } from '../../components';
+import { Container, Title, Toolbar } from '../../components';
 
 
 export default function Dashboard({ navigation }) {
     return (
-        <Container>
-            <Title>Dashboard!</Title>
-            
+        <Container justifyContent="flex-start">
+            <Toolbar>
+                <Title>Teste</Title>
+            </Toolbar>
         </Container>
     );
 };
