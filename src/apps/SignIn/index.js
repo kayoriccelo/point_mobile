@@ -11,7 +11,8 @@ export default function SignIn({ navigation }) {
     const [password, setPassword] = useState('');
 
     const handleSignInPress = () => {
-        console.log('Sign in Press;')
+        console.log('Sign in Press;');
+        navigation.navigate('Dashboard');
     };
 
     const handleCreateAccountPress = () => {

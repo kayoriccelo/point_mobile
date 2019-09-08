@@ -5,12 +5,12 @@ YellowBox.ignoreWarnings([
     'Unrecognized WebSocket'
 ]);
 
-import Routes from '../routes';
+import { RoutesPrimary } from '../routes';
 
 
 const App = () => {
     return (
-        <Routes />
+        <RoutesPrimary />
     );
 };
 
