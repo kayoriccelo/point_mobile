@@ -3,7 +3,7 @@ import { Platform, StatusBar } from 'react-native';
 
 import {
     Container, Header, Logo, Title, Content, Grid,
-    Input, Button, Link
+    Input, Submit, Link
 } from '../../components';
 
 
@@ -107,7 +107,7 @@ export default function SignUp({ navigation }) {
                     secureTextEntry={true}
                     ref={values['password']['ref']}
                 />
-                <Button label="Sign Up" onPress={handleCreateAccountPress} />
+                <Submit label="Sign Up" onPress={handleCreateAccountPress} />
                 <Link label="Already have an account? Sign In" onPress={handleSignInPress} />
             </Content>
         </Container>

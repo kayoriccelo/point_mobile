@@ -2,40 +2,26 @@ import React from 'react';
 import { createAppContainer, createSwitchNavigator } from 'react-navigation';
 import { createMaterialBottomTabNavigator } from 'react-navigation-material-bottom-tabs';
 import Icon from 'react-native-vector-icons/FontAwesome';
+
 import SignIn from '../apps/SignIn';
 import SignUp from '../apps/SignUp';
-import Dashboard from '../apps/Dashboard';
-import Profile from '../apps/Profile';
+import Home from '../apps/Home';
 import MyPoints from '../apps/MyPoints';
 import PointMarking from '../apps/PointMarking';
+import Profile from '../apps/Profile';
 
 
 export const RoutesPrimary = createAppContainer(
     createSwitchNavigator({
         SignIn,
         SignUp,
+        Profile,
         Main: createMaterialBottomTabNavigator({
-            Dashboard: {
-                screen: Dashboard,
+            Home: {
+                screen: Home,
                 navigationOptions: () => ({
                     tabBarIcon: ({ focused }) => (
                         <Icon name="home" size={20} color={focused ? '#fff' : '#ddd'} />
-                    ),
-                }),
-            },
-            Profile: {
-                screen: Profile,
-                navigationOptions: () => ({
-                    tabBarIcon: ({ focused }) => (
-                        <Icon name="user-circle" size={20} color={focused ? '#fff' : '#ddd'} />
-                    ),
-                }),
-            },
-            Points: {
-                screen: MyPoints,
-                navigationOptions: () => ({
-                    tabBarIcon: ({ focused }) => (
-                        <Icon name="list-alt" size={20} color={focused ? '#fff' : '#ddd'} />
                     ),
                 }),
             },
@@ -44,6 +30,14 @@ export const RoutesPrimary = createAppContainer(
                 navigationOptions: () => ({
                     tabBarIcon: ({ focused }) => (
                         <Icon name="plus-circle" size={20} color={focused ? '#fff' : '#ddd'} />
+                    ),
+                }),
+            },
+            Points: {
+                screen: MyPoints,
+                navigationOptions: () => ({
+                    tabBarIcon: ({ focused }) => (
+                        <Icon name="list-alt" size={20} color={focused ? '#fff' : '#ddd'} />
                     ),
                 }),
             },

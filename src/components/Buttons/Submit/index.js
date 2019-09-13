@@ -2,7 +2,7 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-const Button = ({ label, onPress }) => {
+const Submit = ({ label, onPress }) => {
     return (
         <Touch onPress={onPress}>
             <Text>{label}</Text>
@@ -25,4 +25,4 @@ export const Text = styled.Text`
     textAlign: center;
 `;
 
-export default Button;
+export default Submit;

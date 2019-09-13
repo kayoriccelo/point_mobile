@@ -6,8 +6,9 @@ import Content from './Content';
 import Logo from './Logo';
 import Title from './Title';
 import Input from './Input';
-import Button from './Button';
+import Submit from './Buttons/Submit';
 import Link from './Link';
+import MenuCustom from './Menu';
 
 
 export {
@@ -19,6 +20,7 @@ export {
     Logo,
     Title,
     Input,
-    Button,
+    Submit,
     Link,
+    MenuCustom,
 };

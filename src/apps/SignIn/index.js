@@ -3,7 +3,7 @@ import { Platform, StatusBar } from 'react-native';
 
 import {
     Container, Header, Logo, Title, Content,
-    Input, Button, Link
+    Input, Submit, Link
 } from '../../components';
 
 export default function SignIn({ navigation }) {
@@ -12,7 +12,7 @@ export default function SignIn({ navigation }) {
 
     const handleSignInPress = () => {
         console.log('Sign in Press;');
-        navigation.navigate('Dashboard');
+        navigation.navigate('Home');
     };
 
     const handleCreateAccountPress = () => {
@@ -47,7 +47,7 @@ export default function SignIn({ navigation }) {
                     autoCorrect={false}
                     secureTextEntry={true}
                 />
-                <Button label="SIGN IN" onPress={handleSignInPress} />
+                <Submit label="SIGN IN" onPress={handleSignInPress} />
                 <Link label="Not already have an account? Sign Up" onPress={handleCreateAccountPress} />
             </Content>
         </Container>

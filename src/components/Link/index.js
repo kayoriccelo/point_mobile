@@ -2,15 +2,15 @@ import React from 'react';
 import styled from 'styled-components';
 
 
-export default function Button({ label, onPress }) {
+export default function Link({ label, onPress }) {
     return (
-        <Link onPress={onPress}>
+        <Touch onPress={onPress}>
             <LinkText>{label}</LinkText>
-        </Link>
+        </Touch>
     );
 };
 
-export const Link = styled.TouchableHighlight`
+export const Touch = styled.TouchableHighlight`
     padding: 6px;
     marginHorizontal: 10px;
     alignSelf: stretch;

@@ -3,8 +3,8 @@ import styled from 'styled-components';
 
 
 export const Image = styled.Image`
-    height: 100px;
-    width: 100px;
+    height: ${props => props.height ? props.height : '100px'};
+    width: ${props => props.width ? props.width : '100px'};
 `;
 
 export const View = styled.View`
