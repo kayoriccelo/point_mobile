@@ -1,28 +1,36 @@
-import React from 'react';
+import React, { useState, useEffect } from 'react';
 
-import { Container, Submit, Input, Grid } from '../../components';
+import { Container, TypeMarking, Grid, Time } from '../../components';
 
 
-export default function PointMarking({ navigation }) {
+export default function PointMarking() {
+    const [currentTime, setCurrentTime] = useState();
+
+    useEffect(() => {
+        return () => {
+            setCurrentTime(null);
+        };
+    }, []);
+
+    useEffect(() => {
+        setInterval(() => {
+            setCurrentTime(new Date().toLocaleTimeString());
+        }, 1000);
+    });
+
     return (
         <Container>
             <Grid>
-                <Submit label="Entry" onPress={() => { }} />
-                <Submit label="Interval Output" onPress={() => { }} />
+                <Time>{currentTime}</Time>
             </Grid>
             <Grid>
-                <Submit label="Return Interval" onPress={() => { }} />
-                <Submit label="Leave" onPress={() => { }} />
+                <TypeMarking label="Entry" onPress={() => { }} />
+                <TypeMarking label="Interval Output" onPress={() => { }} />
             </Grid>
-            <Input
-                placeholder="Password"
-                // value={password}
-                onChangeText={(e) => setPassword(e)}
-                autoCapitalize="none"
-                autoCorrect={false}
-                secureTextEntry={true}
-            />
-            <Submit label="Submit" onPress={() => { }} />
+            <Grid>
+                <TypeMarking label="Return Interval" onPress={() => { }} />
+                <TypeMarking label="Leave" onPress={() => { }} />
+            </Grid>
         </Container>
     );
 };

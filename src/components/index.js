@@ -7,8 +7,10 @@ import Logo from './Logo';
 import Title from './Title';
 import Input from './Input';
 import Submit from './Buttons/Submit';
+import TypeMarking from './Buttons/TypeMarking';
 import Link from './Link';
 import MenuCustom from './Menu';
+import Time from './Time';
 
 
 export {
@@ -21,6 +23,8 @@ export {
     Title,
     Input,
     Submit,
+    TypeMarking,
     Link,
     MenuCustom,
+    Time,
 };
