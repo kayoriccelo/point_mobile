@@ -1,7 +1,32 @@
+import React from 'react';
 import styled from 'styled-components';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 
-const Message = styled.Text`
+export const Message = ({ message, showMessage, variant }) => {
+	const colors = {
+		'success': '#08a092',
+		'error': '#ce2029',
+		'warning': ''
+	};
+
+	useEffect(() => {
+		setInterval(() => {
+            showMessage({ ...message, open: false })
+        }, 3000);
+	});
+
+	return (
+		message.open && (
+			<Text color={colors[variant]}>
+				{message.message}
+			</Text>
+		)
+	);
+};
+
+const Text = styled.Text`
   textAlign: center;
   color: ${props => props.is_error ? '#ce2029' : '#08a092'};
   fontSize: 16px;
@@ -9,4 +34,6 @@ const Message = styled.Text`
   marginHorizontal: 20px;
 `;
 
-export default Message;
+const mapStateToProps = ({ message }) => ({ message: message });
+const mapDispatchToProps = dispatch => bindActionCreators({ showMessage }, dispatch);
+export default connect(mapStateToProps, mapDispatchToProps)(Message);
