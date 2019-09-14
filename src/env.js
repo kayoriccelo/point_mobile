@@ -1,2 +1,1 @@
-
-export const rota = 'http://localhost:8000'
+export const rota = 'http://localhost:8000';

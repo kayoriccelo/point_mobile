@@ -1,13 +1,11 @@
 import React from 'react';
 
-import { Container, Title } from '../../components';
+import {Container, Title} from '../../components';
 
-
-export default function MyPoints({ navigation }) {
-    return (
-        <Container>
-            <Title>My Points!</Title>
-            
-        </Container>
-    );
-};
+export default function MyPoints() {
+  return (
+    <Container>
+      <Title>My Points!</Title>
+    </Container>
+  );
+}

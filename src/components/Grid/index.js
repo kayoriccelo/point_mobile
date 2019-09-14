@@ -1,8 +1,7 @@
 import styled from 'styled-components';
 
-
 export const Grid = styled.View`
-    flexDirection: row;
-`
+  flexdirection: row;
+`;
 
 export default Grid;

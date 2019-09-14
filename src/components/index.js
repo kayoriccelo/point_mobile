@@ -14,21 +14,20 @@ import Time from './Time';
 import List from './List';
 import Message from './Message';
 
-
 export {
-    Container,
-    Header,
-    Toolbar,
-    Grid,
-    Content,
-    Logo,
-    Title,
-    Input,
-    Submit,
-    TypeMarking,
-    Link,
-    MenuCustom,
-    Time,
-    List,
-    Message,
+  Container,
+  Header,
+  Toolbar,
+  Grid,
+  Content,
+  Logo,
+  Title,
+  Input,
+  Submit,
+  TypeMarking,
+  Link,
+  MenuCustom,
+  Time,
+  List,
+  Message,
 };
