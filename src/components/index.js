@@ -12,6 +12,7 @@ import Link from './Link';
 import MenuCustom from './Menu';
 import Time from './Time';
 import List from './List';
+import Message from './Message';
 
 
 export {
@@ -29,4 +30,5 @@ export {
     MenuCustom,
     Time,
     List,
+    Message,
 };
