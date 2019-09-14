@@ -1,16 +1,20 @@
 import React from 'react';
 import { YellowBox } from 'react-native';
+import { Provider } from 'react-redux';
+import store from '../store';
+
+import { RoutesPrimary } from '../routes';
+
 
 YellowBox.ignoreWarnings([
     'Unrecognized WebSocket'
 ]);
 
-import { RoutesPrimary } from '../routes';
-
-
 const App = () => {
     return (
-        <RoutesPrimary />
+        <Provider store={store}>
+            <RoutesPrimary />
+        </Provider>
     );
 };
 

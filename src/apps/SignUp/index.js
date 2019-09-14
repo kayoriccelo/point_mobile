@@ -1,13 +1,16 @@
 import React, { useState, useRef } from 'react';
 import { Platform, StatusBar } from 'react-native';
+import { connect } from 'react-redux';
+import { bindActionCreators } from 'redux';
 
 import {
     Container, Header, Logo, Title, Content, Grid,
-    Input, Submit, Link
+    Input, Submit, Link, Message
 } from '../../components';
+import { save, showMessage } from './store/ducks';
 
 
-export default function SignUp({ navigation }) {
+export const SignUp = ({ navigation, save, showMessage }) => {
     const [values, setValue] = useState({
         first_name: { value: null, ref: useRef() },
         last_name: { value: null, ref: useRef() },
@@ -26,7 +29,19 @@ export default function SignUp({ navigation }) {
     };
 
     const handleCreateAccountPress = () => {
-        console.log('Create Account Press;')
+        let is_required = false;
+        let user = {};
+
+        Object.keys(values).map(field => {
+            if (!is_required) is_required = values[field].value === null;
+            user[field] = values[field];
+        })
+        
+        if (!is_required) {
+            save(user, navigation);
+        } else {
+            showMessage({ message: 'Required fields.', variant: 'warning', open: true });
+        };
     };
 
     return (
@@ -42,6 +57,7 @@ export default function SignUp({ navigation }) {
                 <Title>Sign Up to Eletronic Point</Title>
             </Header>
             <Content>
+                <Message />
                 <Grid>
                     <Input
                         width="41%"
@@ -107,9 +123,13 @@ export default function SignUp({ navigation }) {
                     secureTextEntry={true}
                     ref={values['password']['ref']}
                 />
-                <Submit label="Sign Up" onPress={handleCreateAccountPress} />
+                <Submit label="SIGN UP" onPress={handleCreateAccountPress} />
                 <Link label="Already have an account? Sign In" onPress={handleSignInPress} />
             </Content>
         </Container>
     );
 };
+
+const mapStateToProps = ({ message }) => ({ message: message });
+const mapDispatchToProps = dispatch => bindActionCreators({ save, showMessage }, dispatch);
+export default connect(mapStateToProps, mapDispatchToProps)(SignUp);

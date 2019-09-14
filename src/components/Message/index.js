@@ -1,25 +1,27 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import styled from 'styled-components';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
+import { showMessage } from './store/ducks';
 
-export const Message = ({ message, showMessage, variant }) => {
+
+export const Message = ({ message, showMessage }) => {
 	const colors = {
 		'success': '#08a092',
 		'error': '#ce2029',
-		'warning': ''
+		'warning': '#ffff00'
 	};
 
 	useEffect(() => {
 		setInterval(() => {
             showMessage({ ...message, open: false })
-        }, 3000);
-	});
+        }, 7000);
+	}, []);
 
 	return (
 		message.open && (
-			<Text color={colors[variant]}>
+			<Text color={colors[message.variant]}>
 				{message.message}
 			</Text>
 		)
@@ -28,7 +30,7 @@ export const Message = ({ message, showMessage, variant }) => {
 
 const Text = styled.Text`
   textAlign: center;
-  color: ${props => props.is_error ? '#ce2029' : '#08a092'};
+  color: ${props => props.color || '#08a092'};
   fontSize: 16px;
   marginBottom: 15px;
   marginHorizontal: 20px;
