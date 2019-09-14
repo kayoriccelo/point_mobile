@@ -11,6 +11,7 @@ import TypeMarking from './Buttons/TypeMarking';
 import Link from './Link';
 import MenuCustom from './Menu';
 import Time from './Time';
+import List from './List';
 
 
 export {
@@ -27,4 +28,5 @@ export {
     Link,
     MenuCustom,
     Time,
+    List,
 };
