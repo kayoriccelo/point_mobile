@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -7,9 +8,9 @@ export const Image = styled.Image`
 `;
 
 export const View = styled.View`
-  borderradius: 10px;
-  backgroundcolor: #fff;
-  marginbottom: 10px;
+  borderRadius: 10px;
+  backgroundColor: #fff;
+  marginBottom: 10px;
 `;
 
 const Logo = props => {

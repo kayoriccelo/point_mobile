@@ -1,7 +1,8 @@
+/* eslint-disable prettier/prettier */
 import styled from 'styled-components';
 
 export const Grid = styled.View`
-  flexdirection: row;
+  flexDirection: row;
 `;
 
 export default Grid;

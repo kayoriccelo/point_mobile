@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -13,15 +14,15 @@ export const Touch = styled.TouchableHighlight`
   height: 100px;
   width: 100px;
   margin: 5px;
-  borderradius: 5px;
-  backgroundcolor: white;
-  justifycontent: center;
-  alignitems: center;
+  borderRadius: 5px;
+  backgroundColor: white;
+  justifyContent: center;
+  alignItems: center;
 `;
 
 export const Text = styled.Text`
-  fontsize: 16px;
-  textalign: center;
+  fontSize: 16px;
+  textAlign: center;
 `;
 
 export default TypeMarking;

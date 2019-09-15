@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-undef */
 import React from 'react';
 import styled from 'styled-components';
@@ -10,8 +11,8 @@ export const View = styled.View`
 `;
 
 export const Touch = styled.TouchableHighlight`
-  paddinghorizontal: 12px;
-  paddingvertical: 6px;
+  paddingHorizontal: 12px;
+  paddingVertical: 6px;
 `;
 
 export default function MenuCustom({navigation}) {

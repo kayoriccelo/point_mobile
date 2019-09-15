@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -11,12 +12,12 @@ export default function Link({label, onPress}) {
 
 export const Touch = styled.TouchableHighlight`
   padding: 6px;
-  marginhorizontal: 10px;
-  alignself: stretch;
+  marginHorizontal: 10px;
+  alignSelf: stretch;
 `;
 
 export const LinkText = styled.Text`
-  fontsize: 16px;
-  textalign: center;
+  fontSize: 16px;
+  textAlign: center;
   color: #fff;
 `;

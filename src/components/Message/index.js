@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-shadow */
 import React, {useEffect} from 'react';
 import styled from 'styled-components';
@@ -27,11 +28,11 @@ export const Message = ({message, showMessage}) => {
 };
 
 const Text = styled.Text`
-  textalign: center;
+  textAlign: center;
   color: ${props => props.color || '#08a092'};
-  fontsize: 16px;
-  marginbottom: 15px;
-  marginhorizontal: 20px;
+  fontSize: 16px;
+  marginBottom: 15px;
+  marginHorizontal: 20px;
 `;
 
 const mapStateToProps = ({message}) => ({message: message});

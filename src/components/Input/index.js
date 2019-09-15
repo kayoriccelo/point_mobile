@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import styled from 'styled-components';
 
 export const Input = styled.TextInput`
@@ -13,8 +14,7 @@ export const Input = styled.TextInput`
     ${props => props.marginLeft && 'marginLeft: ' + props.marginLeft + ';'}
     ${props => props.marginTop && 'marginTop: ' + props.marginTop + ';'}
     ${props => props.marginRight && 'marginRight: ' + props.marginRight + ';'}
-    ${props =>
-      props.marginBottom && 'marginBottom: ' + props.marginBottom + ';'}
+    ${props => props.marginBottom && 'marginBottom: ' + props.marginBottom + ';'}
 `;
 
 export default Input;

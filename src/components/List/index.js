@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 /* eslint-disable no-undef */
 import React, {useState, useEffect} from 'react';
 import styled from 'styled-components';
@@ -57,18 +58,18 @@ const List = ({items, fieldName, getList}) => {
 };
 
 export const FlatList = styled.FlatList`
-  margintop: 30px;
+  marginTop: 30px;
 `;
 
 export const ItemView = styled.View`
-  backgroundcolor: #eee;
-  margintop: 20px;
+  backgroundColor: #eee;
+  marginTop: 20px;
   padding: 30px;
 `;
 
 export const Loading = styled.View`
-  alignself: center;
-  marginvertical: 20px;
+  alignSelf: center;
+  marginVertical: 20px;
 `;
 
 export default List;

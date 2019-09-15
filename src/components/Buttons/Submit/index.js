@@ -1,3 +1,4 @@
+/* eslint-disable prettier/prettier */
 import React from 'react';
 import styled from 'styled-components';
 
@@ -10,18 +11,18 @@ const Submit = ({label, onPress}) => {
 };
 
 export const Touch = styled.TouchableHighlight`
-  paddinghorizontal: 10px;
-  paddingvertical: 6px;
-  marginbottom: 5px;
-  borderradius: 5px;
-  backgroundcolor: #3f51b5;
-  alignself: stretch;
+  paddingHorizontal: 10px;
+  paddingVertical: 6px;
+  marginBottom: 5px;
+  borderRadius: 5px;
+  backgroundColor: #3f51b5;
+  alignSelf: stretch;
 `;
 
 export const Text = styled.Text`
   color: #fff;
-  fontsize: 16px;
-  textalign: center;
+  fontSize: 16px;
+  textAlign: center;
 `;
 
 export default Submit;
