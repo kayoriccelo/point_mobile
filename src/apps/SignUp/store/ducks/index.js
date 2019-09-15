@@ -11,10 +11,10 @@ export function save(user, navigation) {
   return dispatch => {
     return apiNotToken.post('api/userallowany/', user).then(
       res => {
-        // dispatch({
-        //     type: Types.SIGNUP,
-        //     payload: res.data
-        // });
+        dispatch({
+          type: Types.SIGNUP,
+          payload: res.data,
+        });
 
         dispatch(
           showMessage({
@@ -39,7 +39,7 @@ export function save(user, navigation) {
           dispatch(
             showMessage({
               open: true,
-              message: 'Not Authorized. ' + e.response.data,
+              message: 'Not Authorized. ',
               variant: 'error',
             }),
           );

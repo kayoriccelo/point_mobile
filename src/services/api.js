@@ -1,7 +1,7 @@
 /* eslint-disable no-shadow */
 import axios from 'axios';
 import axios2 from 'axios';
-import {AsyncStorage} from 'react-native';
+import {AsyncStorage} from '@react-native-community/async-storage';
 
 import {rota} from '../env';
 
@@ -61,16 +61,8 @@ axios.interceptors.response.use(
   },
 );
 
-axios2.interceptors.request.use(
-  config => {
-    config.baseURL = rota;
-    return config;
-  },
-  error => {
-    return Promise.reject(error);
-  },
-);
-
-export {axios2 as apiNotToken};
+export const apiNotToken = axios.create({
+  baseURL: rota,
+});
 
 export default axios;

@@ -44,7 +44,7 @@ export const SignUp = ({navigation, save, showMessage}) => {
       if (!is_required) {
         is_required = values[field].value === null;
       }
-      user[field] = values[field];
+      user[field] = values[field].value;
     });
 
     if (!is_required) {
